@@ -29,8 +29,8 @@ const Services = [
   {
     id: 5,
     icon: logo,
-    title: "Booking SME & Corporate",
-    description: "From personal packages to business shipments — we deliver on time, every time.",
+    title: "Corporate Service / Contract In Logistics",
+    description: "Customized corporate services which includes warehouse and inventory management support.",
   },
   {
     id: 6,
