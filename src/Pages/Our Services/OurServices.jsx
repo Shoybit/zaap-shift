@@ -23,8 +23,8 @@ const Services = [
   {
     id: 4,
     icon: logo,
-    title: "Booking SME & Corporate",
-    description: "From personal packages to business shipments — we deliver on time, every time.",
+    title: "Cash on Home Delivery",
+    description: "100% cash on delivery anywhere in Bangladesh with guaranteed safety of your product.",
   },
   {
     id: 5,
