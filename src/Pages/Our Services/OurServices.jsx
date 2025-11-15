@@ -17,8 +17,8 @@ const Services = [
   {
     id: 3,
     icon: logo,
-    title: "Delivery Hub",
-    description: "From personal packages to business shipments — we deliver on time, every time.",
+    title: "Fulfillment Solution",
+    description: "We also offer customized service with inventory management support, online order processing, packaging, and after sales support.",
   },
   {
     id: 4,
