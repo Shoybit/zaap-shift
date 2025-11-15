@@ -11,8 +11,8 @@ const Services = [
   {
     id: 2,
     icon: logo,
-    title: "Cash On Delivery",
-    description: "From personal packages to business shipments — we deliver on time, every time.",
+    title: "Nationwide Delivery",
+    description: "We deliver parcels nationwide with home delivery in every district, ensuring your products reach customers within 48–72 hours.",
   },
   {
     id: 3,
