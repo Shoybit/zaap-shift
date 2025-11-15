@@ -35,8 +35,8 @@ const Services = [
   {
     id: 6,
     icon: logo,
-    title: "Booking SME & Corporate",
-    description: "From personal packages to business shipments — we deliver on time, every time.",
+    title: "Parcel Return",
+    description: "Through our reverse logistics facility we allow end customers to return or exchange their products with online business merchants.",
   },
 ];
 
