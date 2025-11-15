@@ -8,51 +8,58 @@ import { HiArrowCircleRight } from 'react-icons/hi';
 
 const Banner = () => {
     return (
-        <Carousel autoPlay={false} 
+        <Carousel autoPlay={true} 
         infiniteLoop = {true} >
             
 <div className="relative">
     <img src={banner1} alt="" />
+<div className="absolute bottom-5 left-14 text-left flex items-center ">
+    <p className="text-black w-[180px] h-[45px] text-center items-center flex justify-center text-[16px] font-semibold drop-shadow-md bg-[#caeb66] px-4 py-1 rounded-2xl">
+        Track Your Parcel
+    </p>
 
-    <div className="absolute bottom-5 left-14 text-left flex items-center gap-3">
-        <p className="text-black text-[16px] font-semibold drop-shadow-md bg-amber-500 px-4 py-1 rounded-2xl">
-            Track Your Parcel
-        </p>
+<span className="relative -rotate-40 w-11 h-7 flex justify-center items-center text-black -ml-1.5">
+    <HiArrowCircleRight size={50} />  
+</span>
 
-        <button className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md">
-            Track Now
-        </button>
-    </div>
+
+    <button className="px-6 py-2 text-black  bg-[#ffffff] btn rounded-md ml-4">
+        Be A Rider
+    </button>
 </div>
-
+</div>
 <div className="relative">
     <img src={banner2} alt="" />
+<div className="absolute bottom-5 left-14 text-left flex items-center ">
+    <p className="text-black w-[180px] h-[45px] text-center items-center flex justify-center text-[16px] font-semibold drop-shadow-md bg-[#caeb66] px-4 py-1 rounded-2xl">
+        Track Your Parcel
+    </p>
 
-    <div className="absolute bottom-5 left-14 text-left flex items-center gap-3">
-        <p className="text-black text-[16px] font-semibold drop-shadow-md bg-amber-500 px-4 py-1 rounded-2xl">
-            Track Your Parcel
-        </p>
+<span className="relative -rotate-40 w-11 h-7 flex justify-center items-center text-black -ml-1.5">
+    <HiArrowCircleRight size={50} />  
+</span>
 
-        <button className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md">
-            Track Now
-        </button>
-    </div>
+
+    <button className="px-6 py-2 text-black  bg-[#ffffff] btn rounded-md ml-4">
+        Be A Rider
+    </button>
+</div>
 </div>
 
 
 <div className="relative">
     <img src={banner3} alt="" />
 <div className="absolute bottom-5 left-14 text-left flex items-center ">
-    <p className="text-black text-[16px] font-semibold drop-shadow-md bg-amber-500 px-4 py-1 rounded-2xl">
+    <p className="text-black w-[180px] h-[45px] text-center items-center flex justify-center text-[16px] font-semibold drop-shadow-md bg-[#caeb66] px-4 py-1 rounded-2xl">
         Track Your Parcel
     </p>
 
-<span className="relative -rotate-40 w-11 h-7 flex justify-center items-center text-black -ml-[6px]">
-    <HiArrowCircleRight size={40} />  
+<span className="relative -rotate-40 w-11 h-7 flex justify-center items-center text-black -ml-1.5">
+    <HiArrowCircleRight size={50} />  
 </span>
 
 
-    <button className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md ml-4">
+    <button className="px-6 py-2 text-black  bg-[#ffffff] btn rounded-md ml-4">
         Be A Rider
     </button>
 </div>
