@@ -1,11 +1,20 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import UseAuth from '../../Hooks/UseAuth';
 
 const Register = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
+    const {registeruser} = UseAuth()
 
     const handleRegistration = (data) => {
         console.log('after', data);
+        registeruser (data.email, data.password)
+        .then(result => {
+            console.log(result.user);
+        })
+        .catch(errors => {
+            console.log(errors);
+        })
     }
 
     return (
