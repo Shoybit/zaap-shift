@@ -1,14 +1,20 @@
 import React from 'react';
 import { FcGoogle } from 'react-icons/fc';
-import UseAuth from '../Hooks/UseAuth';
+import UseAuth from '../Hooks/useAuth';
+import { useLocation, useNavigate } from 'react-router';
 
 const SocalLogin = () => {
-    const { signInWithGoogle } = UseAuth(); // Get Google login function
+    const { signInWithGoogle } = UseAuth();
+        const location = useLocation()
+        const navigate = useNavigate()
+        console.log('loaction is social', location );
 
     const handleGoogleLogin = () => {
         signInWithGoogle()
             .then(result => {
                 console.log('Google user:', result.user);
+                navigate(location?.state || '/')
+
             })
             .catch(error => {
                 console.log('Google login error:', error.message);

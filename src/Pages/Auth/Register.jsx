@@ -1,6 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router';
+import { Link, useLocation, useNavigate } from 'react-router';
 import SocalLogin from '../SocalLogin';
 import UseAuth from '../../Hooks/useAuth';
 import axios from 'axios';
@@ -8,6 +8,8 @@ import axios from 'axios';
 const Register = () => {
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
     const { registerUser, updateUserProfile } = UseAuth(); 
+            const location = useLocation()
+            const navigate = useNavigate()
 
 const handleRegistration = async (data) => {
     try {
@@ -37,6 +39,7 @@ const handleRegistration = async (data) => {
         console.log("Profile updated successfully!");
 
         reset();
+        
 
     } catch (error) {
         console.error("Error during registration:", error);
@@ -123,14 +126,15 @@ const handleRegistration = async (data) => {
                         <button className="btn btn-neutral w-full mt-4">Register</button>
                     </fieldset>
 
-                    <SocalLogin />
-
                     <p className="text-center mt-4 text-sm text-gray-600">
-                        Already have an account?{' '}
+                        Already have an account
                         <Link to="/login" className="text-blue-600 hover:underline">
                             Login
                         </Link>
                     </p>
+
+                    <SocalLogin />
+
                 </form>
             </div>
         </div>

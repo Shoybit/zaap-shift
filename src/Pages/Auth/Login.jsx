@@ -1,20 +1,22 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import UseAuth from '../../Hooks/UseAuth';
-import { Link } from 'react-router';
+import { Link, useLocation, useNavigate } from 'react-router';
 import SocalLogin from '../SocalLogin';
+import UseAuth from '../../Hooks/useAuth';
 
 
 const Login = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const { signInUser } = UseAuth(); 
-
+    const location = useLocation()
+    const navigate = useNavigate()
     const handelLogin = (data) => {
-        console.log('form data:', data);
+        console.log('form data:', data,location);
 
         signInUser(data.email, data.password)
             .then(result => {
                 console.log("User logged in:", result.user);
+                navigate(location?.state || '/')
             })
             .catch(error => {
                 console.log("Login Error:", error.message);
@@ -72,6 +74,10 @@ const Login = () => {
 
                 <button className="btn btn-neutral w-full mt-4">Login</button>
             </fieldset>
+
+            <p>New to Zap Shift <Link
+className='text-blue-400 underline'
+to="/register" >Register</Link></p>
                 <SocalLogin></SocalLogin>
         </div>
     </div>
