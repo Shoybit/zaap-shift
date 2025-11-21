@@ -2,6 +2,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import UseAuth from '../../Hooks/UseAuth';
 import { Link } from 'react-router';
+import SocalLogin from '../SocalLogin';
 
 
 const Login = () => {
@@ -71,7 +72,7 @@ const Login = () => {
 
                 <button className="btn btn-neutral w-full mt-4">Login</button>
             </fieldset>
-
+                <SocalLogin></SocalLogin>
         </div>
     </div>
 </form>

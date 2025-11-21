@@ -1,6 +1,8 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { Link } from 'react-router'; // Make sure to use react-router-dom
 import UseAuth from '../../Hooks/UseAuth';
+import SocalLogin from '../SocalLogin';
 
 const Register = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -75,6 +77,17 @@ const Register = () => {
                         <button className="btn btn-neutral w-full mt-4">Register</button>
 
                     </fieldset>
+
+                    {/* Social Login */}
+                    <SocalLogin />
+
+                    {/* Link to Login Page */}
+                    <p className="text-center mt-4 text-sm text-gray-600">
+                        Already have an account?{' '}
+                        <Link to="/login" className="text-blue-600 hover:underline">
+                            Login
+                        </Link>
+                    </p>
                 </form>
             </div>
         </div>
