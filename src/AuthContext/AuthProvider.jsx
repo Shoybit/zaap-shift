@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { Profiler, useEffect, useState } from 'react';
 import { AuthContext } from './AuthContext';
 import { 
     createUserWithEmailAndPassword,
@@ -6,7 +6,8 @@ import {
     GoogleAuthProvider,
     signInWithPopup,
     onAuthStateChanged,
-    signOut
+    signOut,
+    updateProfile
 } from 'firebase/auth';
 import { auth } from '../Firebase/Firebase.int';
 
@@ -42,6 +43,12 @@ const AuthProvider = ({ children }) => {
         return signOut(auth)
     }
 
+    //Update profile
+
+    const updateUserProfile = (Profile)  => {
+        return updateProfile(auth.currentUser, Profile)
+    }
+    
     // Track currently logged-in user
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -59,6 +66,7 @@ const AuthProvider = ({ children }) => {
         signInUser,
         signInWithGoogle,
         logOut,
+        updateUserProfile
     };
 
     return (
