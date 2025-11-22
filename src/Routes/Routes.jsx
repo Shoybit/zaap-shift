@@ -7,6 +7,7 @@ import Login from "../Pages/Auth/Login";
 import Register from "../Pages/Auth/Register";
 import PrivateRoute from "./PrivateRoute";
 import Rider from "../Pages/Rider/Rider";
+import About from "../Pages/About/About";
 
 export const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ export const router = createBrowserRouter([
             path: 'cover',
             element: <Cover></Cover>,
             loader: () => fetch('/warehouses.json').then(res => res.json())
+        },
+        {
+            path: 'about',
+            Component: About
         }
         
     ]
