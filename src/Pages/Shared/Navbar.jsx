@@ -19,11 +19,49 @@ const handleLogout = () => {
 
 
     const links = (
-        <>
-            <li><NavLink to="/service">Service</NavLink></li>
-            <li><NavLink to="/about">About Us</NavLink></li>
-            <li><NavLink to="/cover">Coverage</NavLink></li>
-        </>
+        
+  <>
+    <li>
+      <NavLink
+        to="/service"
+        className={({ isActive }) =>
+          isActive
+            ? "bg-[#caeb66] text-[#606060] px-3 py-2 rounded-md font-semibold"
+            : "px-3 py-2"
+        }
+      >
+        Service
+      </NavLink>
+    </li>
+
+    <li>
+      <NavLink
+        to="/about"
+        className={({ isActive }) =>
+          isActive
+            ? "bg-[#caeb66] text-[#606060] px-3 py-2 rounded-md font-semibold"
+            : "px-3 py-2"
+        }
+      >
+        About Us
+      </NavLink>
+    </li>
+
+    <li>
+      <NavLink
+        to="/cover"
+        className={({ isActive }) =>
+          isActive
+            ? "bg-[#caeb66] text-[#606060] px-3 py-2 rounded-md font-semibold"
+            : "px-3 py-2"
+        }
+      >
+        Coverage
+      </NavLink>
+    </li>
+  </>
+
+       
     );
 
     return (
