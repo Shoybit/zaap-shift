@@ -59,6 +59,18 @@ const handleLogout = () => {
         Coverage
       </NavLink>
     </li>
+    <li>
+      <NavLink
+        to="/send-parcel"
+        className={({ isActive }) =>
+          isActive
+            ? "bg-[#caeb66] text-[#606060] px-3 py-2 rounded-md font-semibold"
+            : "px-3 py-2"
+        }
+      >
+        Send Parcel
+      </NavLink>
+    </li>
   </>
 
        
